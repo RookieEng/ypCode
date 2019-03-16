@@ -1,0 +1,75 @@
+<view class='container'>
+
+  <view class='r_top'>{{datas.title}}</view>
+
+  <view class='movies'>
+    <image src='{{datas.images.large}}' class='img'></image>
+
+    <view class='right'>
+      <view class='typeBox'>
+        <view class='lefts'>类型：</view>
+        <view class='types' wx:for="{{datas.genres}}">{{item}}</view>
+      </view>
+      <view class='long'>评分：{{datas.rating.average}} 分</view>
+      <view class='long'>时长：{{datas.durations}}</view>
+      <view class='long'>制片地：{{datas.countries[0]}}</view>
+      <view class='time'>上映时间：{{datas.mainland_pubdate}}</view>
+      <view class='collect'>收藏：{{datas.collect_count}}</view>
+      <view class='collect'>放映次数：{{datas.reviews_count}}</view>
+      <navigator class='collect'>评论：{{datas.reviews_count}}</navigator>
+    </view>
+  </view>
+
+  <view>
+
+    <view class='dybox'>
+      <view>主演：</view>
+      <view>
+        <navigator class='dy' wx:for="{{datas.casts}}" data-id="{{item.id}}" url='../manInfo/manInfo?id={{item.id}}'>{{item.name}}</navigator>
+      </view>
+    </view>
+
+    <view class='dybox'>
+
+      <view>导演：</view>
+      <view>
+        <navigator class='dy' hover-class='none' wx:for="{{datas.directors}}" data-id="{{item.id}}" url='../manInfo/manInfo?id={{item.id}}'>{{item.name}}</navigator>
+      </view>
+    </view>
+    <view class='dybox'>
+
+      <view>编剧：</view>
+      <view>
+        <navigator class='dy' hover-class='none' wx:for="{{datas.writers}}" data-id="{{item.id}}" url='../manInfo/manInfo?id={{item.id}}'>{{item.name}}</navigator>
+      </view>
+    </view>
+    <view class='dybox'>
+      <view>片花：</view>
+      <view>
+        <navigator class='dy' hover-class='none' wx:for="{{datas.blooper_urls}}" data-url='{{item}}' bindtap='paly'>花絮{{index+1}}</navigator>
+      </view>
+    </view>
+    <view class='dybox'>
+      <view>播放：</view>
+      <view>
+        <navigator class='dy' hover-class='none' wx:for="{{datas.videos}}" data-url='{{item.sample_link}}' bindtap='paly'>{{item.source.name}}{{item.need_pay?'（付费）':'（免费）'}}</navigator>
+      </view>
+    </view>
+    <view>简介：{{datas.summary}}</view>
+
+    <view class='pl'>
+      <view class='top'>
+        <view>评论</view>
+        <navigator url='{{datas.alt}}'>去豆瓣</navigator>
+      </view>
+      <view class='bottoms'>
+        <view class='cont' wx:for="{{datas.popular_reviews}}">
+          <view class='tit'>{{item.title}} {{item.rating.value}}分</view>
+          <view class='sum'>{{item.summary}}</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+<video class='v' danmu-btn enable-danmu autoplay src='{{videoSrc}}' wx:if='{{isVideo}}' bindended="videoEnd" binderror="videoError"></video>
+</view>

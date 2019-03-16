@@ -1,0 +1,91 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+
+
+
+/* 电影页面 列表样式 */
+
+.movies{
+  margin-bottom: 40rpx;
+}
+.item {
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2rpx 2rpx 5rpx #eee;
+}
+
+.right {
+  width: 410rpx;
+}
+.leftImg{
+  width: 340rpx;
+}
+.title {
+  font-size: 34rpx;
+  width: 360rpx;
+  height: 60rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.right .r_top {
+  height: 70rpx;
+  margin: 0;
+}
+
+.point {
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  background-color: #4da8eb;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20rpx;
+  margin-top: 4rpx;
+}
+
+.img {
+  width: 300rpx;
+  margin: 0 20rpx;
+}
+
+navigator {
+  color: #4da8eb;
+}
+
+.typeBox, .cats, .r_top, .dybox {
+  display: flex;
+  flex-direction: row;
+  /* height: 50rpx;
+  line-height: 50rpx; */
+  margin: 12rpx 0;
+}
+
+.collect, .time,.long {
+  /* height: 50rpx;
+  line-height: 50rpx; */
+  margin: 12rpx 0;
+
+}
+.dybox view, .cats view{
+  width: 336rpx;
+}
+.right .lefts{
+  width:88rpx;
+}
+.dybox navigator, .cats navigator, .types {
+  margin: 0 10rpx 0 0;
+  display: inline-block;
+}

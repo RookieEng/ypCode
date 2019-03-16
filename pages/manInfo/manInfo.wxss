@@ -1,0 +1,61 @@
+.container {
+  padding: 20rpx;
+  color: #666;
+  font-size: 28rpx;
+}
+.movies{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+}
+.right{
+  width: 398rpx;
+  padding-right: 12rpx;
+}
+.dybox > view:first-of-type{
+  width: 90rpx;
+}
+.dybox .pro{
+  width: 308rpx;
+  display: flex;
+  flex-direction: row;
+}
+.pro > view{
+  display: inline-block;
+  min-width: 50rpx!important;
+}
+.other{
+  height: 420rpx;
+  width: 710rpx;
+  padding-top: 12rpx;
+}
+.items{
+  height: 400rpx;
+}
+.scroll-x {
+  display: flex;
+  flex-direction: row; 
+}
+.scroll-x .yy{
+  margin-top: 12rpx;
+  position: relative;
+}
+.imgs{
+  width: 216rpx;
+  height: 324rpx;
+  margin-right: 10rpx;
+}
+.point{
+  position: absolute;
+  right: 14rpx;
+  top:4rpx;
+  font-size: 18rpx;
+}
+.titles{
+  font-size: 22rpx;
+}
+.self{
+  width:710rpx;
+  text-align:left;
+  padding-top:12rpx;
+}

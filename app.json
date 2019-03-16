@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/hot/hot",
+    "pages/coming/coming",
+    "pages/top250/top250",
+    "pages/user/user",
+    "pages/detail/detail",
+    "pages/manInfo/manInfo",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#111",
+    "navigationBarTitleText": "微信",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#d81e06",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "clas": "menu-item",
+        "text": "首页",
+        "active":true,
+        "iconPath": "img/index.png",
+        "selectedIconPath": "img/index1.png"
+      },
+      {
+        "pagePath": "pages/hot/hot",
+        "clas": "menu-item",
+        "text": "正在热映",
+        "iconPath": "img/hot.png",
+        "selectedIconPath": "img/hot1.png"
+      },
+      {
+        "pagePath": "pages/coming/coming",
+        "clas": "menu-item",
+        "text": "即将上映",
+        "iconPath": "img/coming.png",
+        "selectedIconPath": "img/coming1.png"
+      },
+      {
+        "pagePath": "pages/top250/top250",
+        "clas": "menu-item",
+        "text": "排行榜",
+        "iconPath": "img/top.png",
+        "selectedIconPath": "img/top1.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "clas": "menu-item",
+        "text": "我",
+        "iconPath": "img/use.png",
+        "selectedIconPath": "img/use1.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

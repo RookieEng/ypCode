@@ -1,0 +1,35 @@
+<!--pages/manInfo/manInfo.wxml-->
+<view class='container'>
+  <view class='movies'>
+    <image src='{{datas.avatars.large}}' class='img'></image>
+
+    <view class='right'>
+      <view class='long' style='font-size:35rpx;margin-top:0'>{{datas.name_en}}</view>
+      <view class='long'>中文名：{{datas.name}}</view>
+      <view class='long'>性别：{{datas.gender}}</view>
+      <view class='long'>出生日期：{{datas.birthday}}</view>
+      <view class='long'>出生地：{{datas.born_place}}</view>
+      <view class='collect'>星座：{{datas.constellation}}</view>
+      <view class='long'>身份：{{datas.professions}}</view>
+
+    </view>
+  </view>
+
+  <view class='other'>
+    <view class='act'>参与作品：</view>
+    <scroll-view scroll-x="true" bindscroll="scroll">
+      <view class="scroll-x">
+        <navigator class='yy' wx:for="{{datas.works}}" hover-class='none' url='../detail/detail?id={{item.subject.id}}'>
+          <image src='{{item.subject.images.medium}}' class='imgs'></image>
+          <view class='point'>{{item.subject.rating.average}}</view>
+          <view class='titles'>{{item.subject.title}}</view>
+        </navigator>
+      </view>
+    </scroll-view>
+
+  </view>
+
+  <view class='self'>个人经历：</view>
+  <view class='collect'>{{datas.summary}}</view>
+
+</view>

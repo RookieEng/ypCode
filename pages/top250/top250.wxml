@@ -1,0 +1,46 @@
+<view class='container'>
+
+  <view class='movies'>
+    <view wx:for="{{datas}}" class='item'>
+      <navigator data-id="{{item.id}}" bindtap='viewDetail' url='../detail/detail?id={{item.id}}' class='leftImg' hover-class='none'>
+        <image src='{{item.images.medium}}' class='img'></image>
+      </navigator>
+      <view class='right'>
+
+        <view class='r_top'>
+          <navigator data-id="{{item.id}}" bindtap='viewDetail' class='title' hover-class='none' url='../detail/detail?id={{item.id}}'>
+            {{item.title}}
+          </navigator>
+          <view class='point'>{{item.rating.average}}</view>
+        </view>
+
+        <view class='typeBox'>
+          <view class='lefts'>类型：</view>
+          <view class='types' wx:for="{{item.genres}}">{{item}}</view>
+        </view>
+        <view class='cats'>
+
+          <view class='lefts'>主演：</view>
+          <view>
+            <navigator class='yy' wx:for="{{item.casts}}" data-id="{{item.id}}" url='../manInfo/manInfo?id={{item.id}}'>{{item.name}}</navigator>
+          </view>
+        </view>
+
+        <view class='dybox'>
+
+          <view class='lefts'>导演：</view>
+          <view>
+            <navigator class='dy' hover-class='none' wx:for="{{item.directors}}" data-id="{{item.id}}" url='../manInfo/manInfo?id={{item.id}}'>{{item.name}}</navigator>
+          </view>
+        </view>
+
+
+        <view class='long'>电影时长：{{item.durations}}</view>
+        <view class='time'>上映时间：{{item.mainland_pubdate}}</view>
+        <view class='collect'>收藏次数：{{item.collect_count}}</view>
+
+      </view>
+    </view>
+  </view>
+
+</view>
